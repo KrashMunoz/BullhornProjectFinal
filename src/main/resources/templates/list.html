@@ -17,8 +17,7 @@
         <td th:text="${Message.posteddate}"></td>
         <td th:text="${Message.sentby}"></td>
         <td>
-            <a th:href="@{/update/{id}(id=${Message.id})}">Update</a> -
-            <a th:href="@{/detail/{id}(id=${Message.id})}">Details</a> -
+            <a th:href="@{/update/{id}(id=${Message.id})}">Update</a>
             <a th:href="@{/delete/{id}(id=${Message.id})}">Delete</a>
         </td>
     </tr>

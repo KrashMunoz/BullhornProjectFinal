@@ -12,13 +12,13 @@
     <input type="hidden" th:field="*{id}" />
     Name :<input type="text" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
-          th:errors="*{content}"></span>
+          th:errors="*{content}"></span><br />
     Date :<input type="text" th:field="*{posteddate}" />
     <span th:if="${#fields.hasErrors('posteddate')}"
-          th:errors="*{posteddate}"></span>
+          th:errors="*{posteddate}"></span><br />
     Message :<textarea rows="3" th:field="*{sentby}" />
     <span th:if="${#fields.hasErrors('sentby')}"
-          th:errors="*{sentby}"></span>
+          th:errors="*{sentby}"></span><br />
     <input type="submit" value="Submit" />
 </form>
 </body>

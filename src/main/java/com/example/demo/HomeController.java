@@ -32,11 +32,11 @@ public class HomeController {
         messageRepository.save(message);
         return "redirect:/";
     }
-    @RequestMapping("/detail/{id}")
-    public String showMessage(@PathVariable("id") long id, Model model){
-        model.addAttribute("message", messageRepository.findOne(id));
-        return "show";
-    }
+    //@RequestMapping("/detail/{id}")
+    //public String showMessage(@PathVariable("id") long id, Model model){
+    //    model.addAttribute("message", messageRepository.findOne(id));
+    //    return "show";
+    //}
     @RequestMapping("/update/{id}")
     public String updateMessage(@PathVariable("id") long id, Model model){
         model.addAttribute("message", messageRepository.findOne(id));
