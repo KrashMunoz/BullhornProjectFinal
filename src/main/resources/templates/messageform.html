@@ -5,25 +5,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Title</title>
+    <title>Submit a Message</title>
+    <br />
+    <br />
+    <br />
 </head>
-<body>
+<body background="circleback.jpg">
+<h1><center>Submit A New Message!</center></h1><br />
 <form action="#"
       th:action="@{/process}"
       th:object="${message}"
       method="post">
+    <center>
+        <div class="container">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+            <div class="well">
     <input type="hidden" th:field="*{id}" />
-    Name :<input type="text" th:field="*{content}" />
+    Name: <br /><input type="text" th:field="*{content}" />
     <span th:if="${#fields.hasErrors('content')}"
-          th:errors="*{content}"></span><br />
-    Date :<input type="text" th:field="*{posteddate}" />
+          th:errors="*{content}"></span><br /><br />
+    Date: <br /><input type="text" th:field="*{posteddate}" />
     <span th:if="${#fields.hasErrors('posteddate')}"
-          th:errors="*{posteddate}"></span><br />
-    Message :<textarea rows="3" th:field="*{sentby}" />
+          th:errors="*{posteddate}"></span><br /><br />
+    Message: <br /><textarea rows="4" th:field="*{sentby}" />
     <span th:if="${#fields.hasErrors('sentby')}"
-          th:errors="*{sentby}"></span><br />
+          th:errors="*{sentby}"></span><br /><br />
     <input type="submit" value="Submit" />
-
+            </div>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+    </center>
 </form>
 </body>
 </html>

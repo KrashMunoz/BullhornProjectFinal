@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <link href="/css/bootstrap.min.css" rel="stylesheet" />
-    <title>Title</title>
+    <title>All Messages</title>
+    <br />
+    <br />
 </head>
-<body>
-<a href="/add">Add a Message</a>
-<table>
+<body background="circleback.jpg">
+<h1><center>All Messages</center></h1>
+<div class="container-fluid">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <a href="/add"><center>Add a Message</center></a>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+    <br />
+    <br />
+    <br />
+<div class="container">
+    <div class="well">
+<table class="table table-bordered">
     <tr>
-        <th>Name</th>
-        <th>Date</th>
-        <th>Content</th>
+        <th><center>Name</center></th>
+        <th><center>Date</center></th>
+        <th><center>Message</center></th>
+        <th><center>Update/Delete</center></th>
     </tr>
     <tr th:each="Message : ${messages}">
         <td th:text="${Message.content}"></td>
@@ -25,5 +40,7 @@
         </td>
     </tr>
 </table>
+</div>
+</div>
 </body>
 </html>
